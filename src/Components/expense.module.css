@@ -1,0 +1,48 @@
+.container{
+    min-width: 400px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+.main{
+    background-color: white;
+    padding: 20px 30px;
+    height: fit-content;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mainBlock{
+    display: none; 
+}
+
+.expenseContainer{
+    max-height: 280px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.expenseBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    margin: 10px 0;
+}
+
+
+.expenseDetail h3{
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.costBox{
+    display: flex;
+    gap: 20px;
+}
