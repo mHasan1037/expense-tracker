@@ -35,11 +35,22 @@ const Expense = ({expenseData, onTotalExpenseChange}) => {
 
 
   useEffect(()=>{
+    const categories = {};
+
+    displayData.forEach((data) => {
+      const { amount, category } = data;
+      if (categories[category]) {
+        categories[category] += amount;
+      } else {
+        categories[category] = amount;
+      }
+    });
+
     setCartData({
-      labels: displayData.map((data) => data.category),
+      labels: Object.keys(categories),
       datasets: [
         {
-          data: displayData.map((data) => data.amount),
+          data: Object.values(categories),
           backgroundColor: ['green', 'purple', 'blue', 'red', 'yellow']
         }
       ]

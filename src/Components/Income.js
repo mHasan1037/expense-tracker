@@ -34,11 +34,22 @@ const Income = ({incomeData, onTotalIncomeChange}) => {
   }, [incomeData])
 
   useEffect(()=>{
+    const incomes = {}
+
+    displayData.forEach((data) => {
+      const { amount, income } = data;
+      if (incomes[income]) {
+        incomes[income] += amount;
+      } else {
+        incomes[income] = amount;
+      }
+    });
+
     setCartData({
-      labels: displayData.map((data) => data.income),
+      labels: Object.keys(incomes),
       datasets: [
         {
-          data: displayData.map((data) => data.amount),
+          data: Object.values(incomes),
           backgroundColor: ['green', 'purple', 'blue', 'red', 'yellow']
         }
       ]
