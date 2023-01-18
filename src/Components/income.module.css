@@ -46,3 +46,18 @@
     display: flex;
     gap: 20px;
 }
+
+@media only screen and (max-width: 1400px){
+    .container{
+        min-width: 380px;
+        order: 1;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .container{
+        order: 2;
+        height: fit-content;
+        width: 40%;
+   }
+}

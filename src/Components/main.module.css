@@ -67,3 +67,17 @@ input[type=number] {
 .create:hover{
     background-color: rgb(243, 243, 243);
 }
+
+
+@media only screen and (max-width: 1400px){
+    .container{
+        min-width: 410px;
+        order: 2;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+   .container{
+         order: 1;
+    }
+}

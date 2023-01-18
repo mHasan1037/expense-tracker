@@ -29,7 +29,7 @@ const ExpenseTracker = () => {
     <div className={style.container}>
         {
           <>
-            <Income  incomeData={incomeData} onTotalIncomeChange={handleTotalAmountChange} />
+            <Income incomeData={incomeData} onTotalIncomeChange={handleTotalAmountChange} />
             <Main getData={getData} totalIncome={totalIncome} totalExpense={totalExpense} />
             <Expense  expenseData={expenseData} onTotalExpenseChange={handleTotalExpenseChange}/>
           </>  

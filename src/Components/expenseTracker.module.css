@@ -6,3 +6,22 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+@media only screen and (max-width: 1400px){
+    .container{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
